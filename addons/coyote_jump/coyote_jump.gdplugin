@@ -1,0 +1,9 @@
+{
+  "plugin": {
+    "name": "CoyoteJump",
+    "description": "Nodo modular con Coyote Time y Jump Buffer.",
+    "author": "Mariano Damian Abadie",
+    "version": "1.0",
+    "script": "res://addons/coyote_jump/coyote_jump.gd"
+  }
+}

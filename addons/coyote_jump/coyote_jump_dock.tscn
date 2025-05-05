@@ -1,0 +1,78 @@
+[gd_scene load_steps=2 format=3 uid="uid://dpy6qnygc7q2k"]
+
+[ext_resource type="Script" uid="uid://dsk8ufiq0mhuk" path="res://addons/coyote_jump/coyote_jump_dock.gd" id="1_ik6de"]
+
+[node name="CoyoteJumpDock" type="Panel"]
+script = ExtResource("1_ik6de")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Settings"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HBoxCoyoteTime" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/HBoxCoyoteTime"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+text = "Coyote Time"
+
+[node name="CoyoteTimeSpin" type="SpinBox" parent="MarginContainer/VBoxContainer/HBoxCoyoteTime"]
+layout_mode = 2
+max_value = 1.0
+step = 0.01
+suffix = "s"
+
+[node name="HBoxJumpBuffer" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/HBoxJumpBuffer"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+text = "Jump Buffer"
+
+[node name="JumpBufferSpin" type="SpinBox" parent="MarginContainer/VBoxContainer/HBoxJumpBuffer"]
+layout_mode = 2
+max_value = 1.0
+step = 0.01
+suffix = "s"
+
+[node name="HBoxJumpAction" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/HBoxJumpAction"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+text = "Jump Action"
+
+[node name="JumpActionEdit" type="LineEdit" parent="MarginContainer/VBoxContainer/HBoxJumpAction"]
+layout_mode = 2
+text = "ui_accept"
+placeholder_text = "example: ui_accept"
+
+[node name="Label2" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Coyote Time"
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Allows jumping for a short time after leaving a platform."
+fit_content = true
+
+[connection signal="value_changed" from="MarginContainer/VBoxContainer/HBoxCoyoteTime/CoyoteTimeSpin" to="." method="_on_coyote_time_changed"]
+[connection signal="value_changed" from="MarginContainer/VBoxContainer/HBoxJumpBuffer/JumpBufferSpin" to="." method="_on_buffer_time_changed"]
+[connection signal="text_changed" from="MarginContainer/VBoxContainer/HBoxJumpAction/JumpActionEdit" to="." method="_on_jump_action_changed"]
