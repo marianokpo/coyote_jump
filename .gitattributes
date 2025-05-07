@@ -1,2 +1,11 @@
 # Normalize EOL for all files that Git considers text files.
 * text=auto eol=lf
+# Exclude GitHub-only or dev files from zip releases
+/.gitignore export-ignore
+/.gitattributes export-ignore
+/.editorconfig export-ignore
+/README.md export-ignore
+/LICENSE.md export-ignore
+/screenshots/ export-ignore
+/tests/ export-ignore
+/dev_notes/ export-ignore

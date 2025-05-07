@@ -1,6 +1,6 @@
-# Coyote Jump v1.0 - Plugin para Godot creado por Mariano Damian Abadie
-# Licencia: https://github.com/[tu_usuario]/coyote-jump/blob/main/LICENSE.md
-# ¿Donar? → https://whydonate.com/es/donate/donaciones-por-proyectos
+# Coyote Jump v1.0 - Godot Plugin created by Mariano Damian Abadie
+# License: https://github.com/marianokpo/coyote_jump/blob/main/README.md
+# Donate? → https://whydonate.com/es/donate/donaciones-por-proyectos
 @tool
 extends Panel
 

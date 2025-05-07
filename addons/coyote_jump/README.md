@@ -21,7 +21,7 @@ func _physics_process(delta):
  jump_handler.set_on_floor(is_on_floor())
 
  if jump_handler.consume_jump():
-     velocity.y = -jump_force
+	 velocity.y = -jump_force
 ```
 
 ## 🙌 Créditos

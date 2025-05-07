@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://l63saodx4qbh"]
+[gd_scene load_steps=5 format=3 uid="uid://l63saodx4qbh"]
 
 [ext_resource type="Script" uid="uid://kgftchagkvn3" path="res://exampleScenes/player.gd" id="1_cjv2m"]
 [ext_resource type="Script" uid="uid://baj7ercl2fb7l" path="res://addons/coyote_jump/coyote_jump.gd" id="1_igke8"]
+[ext_resource type="Texture2D" uid="uid://b4mipjqqlgf88" path="res://icon_banner.png" id="2_8qlvo"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cmdug"]
 size = Vector2(40, 40)
@@ -9,18 +10,10 @@ size = Vector2(40, 40)
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_cjv2m")
 
-[node name="ColorRect" type="ColorRect" parent="."]
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -20.0
-offset_top = -20.0
-offset_right = 20.0
-offset_bottom = 20.0
-grow_horizontal = 2
-grow_vertical = 2
+[node name="Sprite" type="Sprite2D" parent="."]
+position = Vector2(-3.8147e-06, 0)
+scale = Vector2(0.322581, 0.3125)
+texture = ExtResource("2_8qlvo")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_cmdug")

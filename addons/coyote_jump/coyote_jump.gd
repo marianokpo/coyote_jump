@@ -1,12 +1,12 @@
-# Coyote Jump v1.0 - Plugin para Godot creado por Mariano Damian Abadie
-# Licencia: https://github.com/[tu_usuario]/coyote-jump/blob/main/LICENSE.md
-# ¿Donar? → https://whydonate.com/es/donate/donaciones-por-proyectos
+# Coyote Jump v1.0 - Godot Plugin created by Mariano Damian Abadie
+# License: https://github.com/marianokpo/coyote_jump/blob/main/README.md
+# Donations? → https://whydonate.com/es/donate/donaciones-por-proyectos
 @tool
 extends Node
 class_name CoyoteJump
 
-## Coyote Time y Jump Buffer Plugin para Godot 4.x ##
-## Permite saltar después de abandonar el suelo y pre-buffer de salto ##
+## Coyote Time and Jump Buffer Plugin for Godot 4.x ##
+## Allows jumping shortly after leaving the ground and pre-buffered jumps ##
 
 @export_category("Coyote Jump Settings")
 
@@ -14,7 +14,7 @@ class_name CoyoteJump
 @export_range(0.0, 0.5, 0.01, "suffix:s") var buffer_time: float = 0.15
 @export var jump_action: StringName = &"ui_accept"
 
-@export_category("Debug / Preview (solo Editor)")
+@export_category("Debug / Preview (Editor Only)")
 @export var debug_print: bool = false
 
 var _coyote_timer: float = 0.0
@@ -29,7 +29,7 @@ func _process(delta: float) -> void:
 	if Engine.is_editor_hint():
 		return
 
-	# Timer de Coyote
+	# Coyote Timer
 	if _is_on_floor:
 		_coyote_timer = coyote_time
 	else:

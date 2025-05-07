@@ -16,7 +16,7 @@ config/icon="res://icon.svg"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/coyote_jump/plugin.cfg", "res://addons/coyotejump/plugin.cfg")
+enabled=PackedStringArray("res://addons/coyote_jump/plugin.cfg")
 
 [rendering]
 
