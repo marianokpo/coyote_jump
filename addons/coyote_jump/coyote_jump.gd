@@ -2,8 +2,9 @@
 # License: https://github.com/marianokpo/coyote_jump/blob/main/README.md
 # Donations? → https://whydonate.com/es/donate/donaciones-por-proyectos
 @tool
-extends Node
 class_name CoyoteJump
+extends Node
+
 
 ## Coyote Time and Jump Buffer Plugin for Godot 4.x ##
 ## Allows jumping shortly after leaving the ground and pre-buffered jumps ##
