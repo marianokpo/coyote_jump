@@ -17,7 +17,7 @@ func _process(_delta):
 	if not Engine.is_editor_hint():
 		return
 
-	if selected_node and selected_node is CoyoteJump:
+	if selected_node and selected_node.get_script() and selected_node.get_script().resource_path.ends_with("coyote_jump.gd"):
 		coyote_spin.value = selected_node.coyote_time
 		buffer_spin.value = selected_node.buffer_time
 		jump_action_input.text = selected_node.jump_action

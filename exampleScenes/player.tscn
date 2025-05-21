@@ -20,4 +20,3 @@ shape = SubResource("RectangleShape2D_cmdug")
 
 [node name="CoyoteJump" type="Node" parent="."]
 script = ExtResource("1_igke8")
-metadata/_custom_type_script = "uid://baj7ercl2fb7l"

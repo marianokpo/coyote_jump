@@ -24,8 +24,11 @@ func _remove_dock():
 		dock = null
 
 func _handles(object):
-	return object is CoyoteJump
+	return isCoyoteJump(object)
 
 func _edit(object):
-	if object is CoyoteJump and dock:
+	if isCoyoteJump(object) and dock:
 		dock.selected_node = object
+
+func isCoyoteJump(object):
+	return object and object.get_script() and object.get_script().resource_path.ends_with("coyote_jump.gd")
